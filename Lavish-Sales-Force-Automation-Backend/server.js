@@ -7,7 +7,7 @@ const app=express();//create an express app
 app.use(bodyParser.urlencoded({extended:true}))//for parsing application/x-www-form-urlencoded
 app.use(bodyParser.json())//for parsing application/json
 
-// Configuring the database
+// Configuring database
 const dbConfig = require('./config/database.config');
 
 mongoose.Promise = global.Promise;
