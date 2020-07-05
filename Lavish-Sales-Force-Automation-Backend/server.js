@@ -42,8 +42,9 @@ app.get('/', (req, res) => {
 });
 
 const salesRepRouter = require('./app/routes/salesRep.routes');
-const distributorRouter = require('./app/routes/distributor.routes');
 const customerRouter = require('./app/routes/customer.routes');
+const distributorRouter = require('./app/routes/distributor.routes');
+
 app.use('/salesreps',salesRepRouter);
 app.use('/distributors',distributorRouter);
 app.use('/customers',customerRouter);
