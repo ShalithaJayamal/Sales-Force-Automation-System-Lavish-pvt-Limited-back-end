@@ -18,14 +18,15 @@ module.exports = function validateDistributor(data){
     if (Validator.isEmpty(data.name)) {
         errors.name = "Full name field is required";
     }
-    if (Validator.isEmpty(data.area)) {
-         errors.area = "Area field is required";
-    }
+    
     if (Validator.isEmpty(data.type)) {
         errors.type = "type field is required";
     }
     if (Validator.isEmpty(data.phoneNo)) {
         errors.phoneNo = "phone number field is required";
+    }
+    if (Validator.isEmpty(data.area)) {
+         errors.area = "Area field is required";
     }
     else if (!Validator.isLength(data.phoneNo, { min:10,max:10})) {
         errors.phoneNo = "Phone Number must be 10 digits";
